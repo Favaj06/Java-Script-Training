@@ -1,0 +1,18 @@
+.done {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.overdue {
+    color: red;
+    font-weight: bold;
+}
+:root {
+    --color-bg: white;
+    --color-text: black;
+}
+
+.dark {
+    --color-bg: black;
+    --color-text: white;
+}
