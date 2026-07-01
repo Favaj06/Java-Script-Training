@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 40px;
+}
+
+.card {
+    width: 320px;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.card-header {
+    padding: 15px;
+}
+
+.card-header h2 {
+    margin: 0;
+}
+
+.job-title {
+    color: gray;
+    margin-top: 5px;
+}
+
+.bio {
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+
+.contact-btn {
+    display: block;
+    margin: 0 15px 15px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
+}
+
+/*
+Explanation of box-shadow:
+
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+0     -> Horizontal offset (no left/right movement)
+4px   -> Vertical offset (shadow moves down 4px)
+8px   -> Blur radius (shadow softness)
+rgba(0, 0, 0, 0.1)
+      -> Shadow color (black with 10% opacity)
+
+This creates a subtle shadow effect around the card.
+*/

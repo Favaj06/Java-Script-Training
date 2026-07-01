@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+.box {
+    width: 300px;
+    height: 150px;
+    padding: 20px;
+    border: 4px solid #333;
+    margin: 40px auto;
+    background-color: lightblue;
+}
+
+/*
+What is the total rendered width of the box?
+
+The total rendered width is 300px because
+box-sizing: border-box includes the content,
+padding, and border within the specified width.
+
+What changes if you remove box-sizing: border-box?
+
+Without border-box, the width property applies only
+to the content area.
+
+Total width becomes:
+
+300px (content)
++ 40px (left & right padding)
++ 8px (left & right border)
+= 348px total width
+
+The element becomes wider than 300px.
+*/
+.content-box {
+    box-sizing: content-box;
+    width: 300px;
+    padding: 20px;
+    border: 4px solid red;
+    margin: 20px auto;
+    background-color: #ffe0e0;
+}
+
+.border-box {
+    box-sizing: border-box;
+    width: 300px;
+    padding: 20px;
+    border: 4px solid green;
+    margin: 20px auto;
+    background-color: #e0ffe0;
+}
+
+/*
+Which box is wider?
+
+The content-box is wider.
+
+Difference:
+
+content-box:
+The width only applies to the content area.
+Padding and border are added outside the width.
+
+300px + 40px padding + 8px border = 348px total width
+
+border-box:
+The width includes content, padding, and border.
+The total width remains 300px.
+
+Therefore, the content-box appears wider than the border-box.
+*/
+.padding-demo {
+    background-color: lightcoral;
+    padding: 30px;
+    margin: 8px 0;
+}
+
+.margin-demo {
+    background-color: lightcoral;
+    padding: 4px;
+    margin: 30px 0;
+}
+
+/*
+What is the visual difference between padding and margin
+when a background colour is applied?
+
+Padding increases the space inside the element.
+The background colour extends into the padding area,
+making the coloured box appear larger.
+
+Margin increases the space outside the element.
+The background colour does not extend into the margin area,
+so only the gap between elements becomes larger.
+
+When would you choose padding over margin and vice versa?
+
+Use padding when you want space between the content and
+the border of an element.
+
+Use margin when you want space between one element and
+other surrounding elements.
+*/

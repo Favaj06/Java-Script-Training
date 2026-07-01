@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Al Favaj M | Portfolio</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!--
+    The viewport meta tag makes the webpage responsive.
+    width=device-width sets the page width equal to the device screen width.
+    initial-scale=1.0 sets the initial zoom level to 100%.
+    It is important because it helps the webpage display properly on
+    mobile phones, tablets, and desktops.
+    -->
+</head>
+
+<body>
+
+    <header>    
+    <h1>Mohamed Al Favaj M</h1>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    </header>
+
+    <main>
+
+        <section id="about">
+            <h2>About Me</h2>
+
+            <p class="intro-text" id="about-paragraph">
+                I am a final-year B.Tech Artificial Intelligence and Data Science student.
+                I am passionate about Full Stack Development, Artificial Intelligence,
+                and building real-world software applications. I enjoy learning new technologies
+                and improving my programming skills.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+
+            <ul>
+                <li class="highlight">JavaScript</li>
+                <li>TypeScript</li>
+                <li>HTML</li>
+                <li>CSS</li>
+            </ul>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+
+            <ol>
+                <li>Learned JavaScript fundamentals and DOM manipulation.</li>
+                <li>Learned TypeScript basics, interfaces, and classes.</li>
+                <li>Built a Task Tracker application using HTML, CSS, and TypeScript.</li>
+            </ol>
+        </section>
+
+        <section id="contact">
+            <h2 id="contact-section">Contact</h2>
+
+            <a href="https://github.com" target="_blank">
+                Visit my GitHub
+            </a>
+
+            <br><br>
+
+            <img
+                src="https://placehold.co/300x200"
+                alt="Placeholder profile image showing a sample portfolio picture"
+            >
+
+            <img
+                src="https://placehold.co/300x200"
+                alt="Placeholder profile image showing a sample portfolio picture"
+            >
+        </section>
+
+        <section id="demo">
+            <h2>Block vs Inline Demo</h2>
+
+            <!-- Block elements -->
+            <p>This is a paragraph — block element</p>
+            <p>This is another paragraph — notice it starts on a new line</p>
+
+            <!-- Inline elements -->
+            <p>
+                This sentence has
+                <strong>bold text</strong>,
+                <em>italic text</em>, and a
+                <a href="#">link</a>
+                all flowing inline within the paragraph.
+            </p>
+
+            <!--
+            Block elements by default:
+            1. div
+            2. p
+            3. h1
+
+            Inline elements by default:
+            1. a
+            2. strong
+            3. em
+            -->
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2024 Mohamed Al Favaj M. All rights reserved.</p>
+    </footer>
+
+    <!--
+    Why do we bother adding semantic tags?
+
+    Semantic tags provide meaning and structure to the webpage.
+    They improve accessibility for screen readers, help search
+    engines understand the content better (SEO), and make the
+    code easier to read, maintain, and understand.
+    -->
+
+</body>
+</html>
+<!--
+What does href="#about" do?
+
+href="#about" creates an internal page link that navigates
+to the element whose id is "about".
+
+How does the browser know where to scroll?
+
+The browser searches for an element with id="about".
+When found, it automatically scrolls to that section
+of the page.
+-->

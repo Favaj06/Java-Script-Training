@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.border-example {
+    border: 3px solid blue;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.outline-example {
+    outline: 3px solid red;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+/*
+Outline vs Border
+
+Border:
+- Takes up space in the box model.
+- Can affect element size.
+
+Outline:
+- Does not take up space.
+- Drawn outside the border.
+- Often used for focus indicators and accessibility.
+*/
+
+.normal-box {
+    background-color: lightgreen;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.display-none-box {
+    display: none;
+    background-color: lightcoral;
+    padding: 15px;
+}
+
+.visibility-hidden-box {
+    visibility: hidden;
+    background-color: lightblue;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+/*
+display: none
+- Element is completely removed from the page.
+- Takes up no space.
+
+visibility: hidden
+- Element becomes invisible.
+- Still takes up space in the layout.
+*/
+
+.max-width-container {
+    max-width: 800px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+/*
+max-width: 800px
+
+Prevents content from becoming too wide on large screens.
+Improves readability and responsive design.
+*/
+
+.overflow-hidden,
+.overflow-scroll,
+.overflow-auto {
+    width: 250px;
+    height: 80px;
+    border: 2px solid black;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.overflow-scroll {
+    overflow: scroll;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
+
+/*
+overflow: hidden
+- Extra content is clipped.
+
+overflow: scroll
+- Scrollbars always appear.
+
+overflow: auto
+- Scrollbars appear only when needed.
+*/

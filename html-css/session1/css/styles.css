@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/*
+Why is the stylesheet linked in <head> and not at the bottom of <body>?
+
+The stylesheet is linked in the <head> so the browser loads the CSS before
+rendering the page content. This ensures the page appears styled immediately
+and prevents a flash of unstyled content (FOUC).
+*/
+
+/* Task A — tag selector: style all h2 headings */
+h2 {
+  color: #2c3e50;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+}
+
+/* Task B — class selector: create a highlight class */
+.highlight {
+  background-color: #fff3cd;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+/* Task C — id selector: style a unique element */
+#contact-section {
+  background-color: #e8f4fd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/*
+Explore Answer:
+When both a class selector and a tag selector target the same element
+with conflicting styles, the class selector wins because it has higher
+specificity than a tag selector.
+
+Specificity Order:
+Tag Selector < Class Selector < ID Selector < Inline Style
+
+/*
+What colour is the paragraph and why?
+The paragraph is green because the ID selector (#about-paragraph)
+has higher specificity than both the class selector (.intro-text)
+and the tag selector (p).
+
+What would you need to do to make the p tag rule win?
+You would need to remove the class and ID from the paragraph,
+or use !important in the p rule (not recommended).
+
+*/
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  margin-right: 20px;
+  color: #3498db;
+  text-decoration: none;
+}
+nav a:hover {
+  text-decoration: underline;
+}

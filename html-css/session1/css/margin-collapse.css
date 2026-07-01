@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+.first {
+    background-color: #ffe0e0;
+    padding: 10px;
+    margin-bottom: 40px;
+}
+
+.second {
+    background-color: #e0e0ff;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/*
+What is the actual gap between the two paragraphs?
+
+The actual gap is 40px, not 60px.
+
+Why?
+
+This happens because of margin collapse.
+When two vertical margins touch, the browser uses only
+the larger margin instead of adding them together.
+
+margin-bottom: 40px
+margin-top: 20px
+
+The larger margin (40px) wins.
+
+When does margin collapse NOT happen?
+
+1. When elements use padding or borders between them.
+2. When elements are inside flexbox containers.
+3. When elements are inside grid containers.
+4. When elements are positioned absolutely or fixed.
+5. When overflow is set to hidden, auto, or scroll.
+*/
