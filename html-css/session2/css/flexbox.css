@@ -1,0 +1,174 @@
+/* ==============================
+   General Page Styling
+============================== */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f8fafc;
+}
+
+h1,
+h2 {
+    margin-bottom: 15px;
+}
+
+hr {
+    margin: 40px 0;
+}
+
+/* ==============================
+   Task 2.1 - Flex Container
+============================== */
+
+.container {
+    display: flex;
+    background: #eee;
+    padding: 1rem;
+    gap: 1rem;
+
+    /* Uncomment one property at a time to observe */
+
+    /* justify-content: center; */
+    /* Moves all items to the center horizontally */
+
+    /* justify-content: space-between; */
+    /* Places first and last items at edges with equal space between */
+
+    /* justify-content: space-evenly; */
+    /* Gives equal spacing around every item */
+
+    /* align-items: flex-start; */
+    /* Aligns items to the top of the container */
+
+    /* align-items: stretch; */
+    /* Stretches items to fill the container height */
+
+    /* flex-direction: column; */
+    /* Arranges items vertically instead of horizontally */
+
+    /* flex-wrap: wrap; */
+    /* Allows items to wrap onto the next line if needed */
+}
+
+.item {
+    background: #4f46e5;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* ==============================
+   Task 2.2 - Flex Grow
+============================== */
+
+.grow-container {
+    display: flex;
+    gap: 1rem;
+    background: #eee;
+    padding: 1rem;
+}
+
+.grow-1 {
+    flex-grow: 1;
+    background: #818cf8;
+    padding: 1rem;
+    text-align: center;
+}
+
+.grow-2 {
+    flex-grow: 2;
+    background: #4f46e5;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/*
+Observation:
+
+flex-grow distributes the available space among items.
+
+grow:1 grow:2 grow:1
+
+The middle item gets twice as much extra space.
+
+If changed to grow:3
+
+grow:1 grow:3 grow:1
+
+The middle item becomes three times wider than each grow:1 item.
+*/
+
+/*
+flex-grow Explanation:
+
+flex-grow controls how much extra space an item receives compared to other flex items.
+Higher values receive a larger share of the available space.
+*/
+
+/* ==============================
+   Task 2.3 - Navigation Bar
+============================== */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #1e293b;
+    padding: 15px 25px;
+    border-radius: 6px;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #93c5fd;
+}
+
+/* ==============================
+   Task 2.4 - Card Row
+============================== */
+
+.card-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.card {
+    flex: 1;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/*
+Observation:
+
+Adding a fourth card makes all cards share the available width equally.
+
+If flex-wrap: wrap; is added and the browser window becomes smaller,
+the cards automatically move onto the next row instead of shrinking too much.
+*/

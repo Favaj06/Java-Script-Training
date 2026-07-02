@@ -1,0 +1,171 @@
+/* ===================================
+   Task 1 - CSS Variables
+=================================== */
+
+:root {
+
+    --primary-color: #2563eb;
+    --secondary-color: #dbeafe;
+    --background-color: #f8fafc;
+    --text-color: #1e293b;
+    --card-color: #ffffff;
+
+}
+
+body {
+
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: var(--background-color);
+    color: var(--text-color);
+
+}
+
+.header {
+
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+
+}
+
+.variables-demo {
+
+    background: var(--secondary-color);
+    padding: 1.5rem;
+    margin-top: 20px;
+    border-radius: 8px;
+
+}
+
+/*
+CSS Variables
+
+Variables are declared using --variable-name inside :root
+and accessed using var(--variable-name).
+
+They make color themes and design systems easy to maintain.
+*/
+
+/* ===================================
+   Task 2 - clamp()
+=================================== */
+
+.fluid-heading {
+
+    font-size: clamp(1rem, 5vw, 2.5rem);
+    color: var(--primary-color);
+    text-align: center;
+
+}
+
+/*
+clamp(min, preferred, max)
+
+Minimum size = 1rem
+Preferred size = 5vw
+Maximum size = 2.5rem
+
+The heading automatically scales between the minimum
+and maximum values without media queries.
+*/
+
+/* ===================================
+   Task 3 - Grid Template Areas
+=================================== */
+
+.grid-layout {
+
+    display: grid;
+
+    grid-template-columns: 220px 1fr;
+
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+
+    gap: 10px;
+
+    margin-top: 30px;
+
+}
+
+.grid-header {
+
+    grid-area: header;
+    background: #2563eb;
+    color: white;
+    padding: 1rem;
+
+}
+
+.grid-sidebar {
+
+    grid-area: sidebar;
+    background: #bfdbfe;
+    padding: 1rem;
+
+}
+
+.grid-main {
+
+    grid-area: main;
+    background: #fef9c3;
+    padding: 1rem;
+
+}
+
+.grid-footer {
+
+    grid-area: footer;
+    background: #1e293b;
+    color: white;
+    padding: 1rem;
+
+}
+
+/*
+grid-template-areas
+
+Instead of placing items using row and column numbers,
+each section is assigned a named area.
+
+This makes layouts easier to read and maintain.
+*/
+
+/* ===================================
+   Task 4 - Aspect Ratio
+=================================== */
+
+.aspect-card {
+
+    width: 100%;
+    max-width: 500px;
+
+    aspect-ratio: 16 / 9;
+
+    background: var(--primary-color);
+
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+    margin-top: 20px;
+
+}
+
+/*
+aspect-ratio
+
+The aspect-ratio property keeps the width and height
+proportional.
+
+This card always maintains a 16:9 ratio even when
+its width changes.
+*/
