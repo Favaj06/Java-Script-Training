@@ -1,0 +1,683 @@
+othing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> git add .
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> git commit -m "html-css/session2: complete activity tasks"
+[main 1c12a57] html-css/session2: complete activity tasks
+ 13 files changed, 1426 insertions(+)
+ create mode 100644 html-css/session2/.gitignore
+ create mode 100644 html-css/session2/css/flexbox.css
+ create mode 100644 html-css/session2/css/grid.css
+ create mode 100644 html-css/session2/css/layout.css
+ create mode 100644 html-css/session2/css/responsive.css
+ create mode 100644 html-css/session2/css/self-learning.css
+ create mode 100644 html-css/session2/css/units.css
+ create mode 100644 html-css/session2/flexbox.html
+ create mode 100644 html-css/session2/grid.html
+ create mode 100644 html-css/session2/layout.html
+ create mode 100644 html-css/session2/responsive.html
+ create mode 100644 html-css/session2/self-learning.html
+ create mode 100644 html-css/session2/units.html
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> git push origin main
+To https://github.com/Favaj06/Java-Script-Training.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/Favaj06/Java-Script-Training.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> git pull --rebase origin main
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 1.96 KiB | 105.00 KiB/s, done.
+From https://github.com/Favaj06/Java-Script-Training
+ * branch            main       -> FETCH_HEAD
+   fd93ca0..522ebd0  main       -> origin/main
+Deletion of directory 'html-css/session2/css' failed. Should I try again? (y/n) n                   
+Successfully rebased and updated refs/heads/main.
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> git push origin main
+Enumerating objects: 20, done.
+Counting objects: 100% (20/20), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (17/17), done.
+Writing objects: 100% (18/18), 9.59 KiB | 701.00 KiB/s, done.
+Total 18 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+To https://github.com/Favaj06/Java-Script-Training.git
+   522ebd0..7bb143a  main -> main
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> git add .                                      
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> git pull --rebase origin main
+From https://github.com/Favaj06/Java-Script-Training
+ * branch            main       -> FETCH_HEAD
+Already up to date.
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> git status                   
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   html-css/session2/flexbox.html
+        modified:   html-css/session2/grid.html
+        modified:   html-css/session2/responsive.html
+        modified:   html-css/session2/self-learning.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> git add .                    
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> git commit -m "html-css/session2: complete activity tasks"
+[main 288c8c3] html-css/session2: complete activity tasks
+ 4 files changed, 2 insertions(+), 30 deletions(-)
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> git push origin main                           
+Enumerating objects: 15, done.
+Counting objects: 100% (15/15), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (8/8), 923 bytes | 307.00 KiB/s, done.
+Total 8 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
+To https://github.com/Favaj06/Java-Script-Training.git
+   7bb143a..288c8c3  main -> main
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> 
+ *  History restored 
+
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> node nodejs/session1/hello.js
+node:internal/modules/run_main:76
+  const type = getNearestParentPackageJSONType(mainPath);
+               ^
+
+Error: Invalid package config \\?\C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1\package.json.
+    at shouldUseESMLoader (node:internal/modules/run_main:76:16)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:147:20)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'ERR_INVALID_PACKAGE_CONFIG'
+}
+
+Node.js v24.12.0
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> ^C
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> cd nodejs/session1
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm install
+
+added 29 packages, and audited 30 packages in 6s
+
+5 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> node nodejs/session1/hello.js
+node:internal/modules/cjs/loader:1424
+  throw err;
+  ^
+
+Error: Cannot find module 'C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1\nodejs\session1\hello.js'
+    at Module._resolveFilename (node:internal/modules/cjs/loader:1421:15)
+    at defaultResolveImpl (node:internal/modules/cjs/loader:1059:19)
+    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1064:22)
+    at Module._load (node:internal/modules/cjs/loader:1227:37)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+
+Node.js v24.12.0
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> node hello.js
+Hello from Node.js
+[ 'APPLE', 'BANANA', 'MANGO' ]
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> node compare.js
+Node version: v24.12.0
+Platform: win32
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> node
+Welcome to Node.js v24.12.0.
+Type ".help" for more information.
+>  10 * 5
+50
+> "hello".toUpperCase()
+'HELLO'
+> [1, 2, 3].filter(n => n > 1)
+[ 2, 3 ]
+> typeof "hello"
+'string'
+> typeof 42
+'number'
+> .exit
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> node process-demo.js
+Node version: v24.12.0
+Platform: win32
+Current directory: C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1
+Memory usage: {
+  rss: 36073472,
+  heapTotal: 6090752,
+  heapUsed: 4545608,
+  external: 1590181,
+  arrayBuffers: 10511
+}
+All arguments: [
+  'C:\\Program Files\\nodejs\\node.exe',
+  'C:\\Users\\M. Mohamed Al Favaj\\OneDrive\\Desktop\\Java-Script-Training\\nodejs\\session1\\process-demo.js'
+]
+Your input: undefined
+NODE_ENV: undefined
+HOME: C:\Users\M. Mohamed Al Favaj
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> node process-demo.js hello
+Node version: v24.12.0
+Platform: win32
+Current directory: C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1
+Memory usage: {
+  rss: 35946496,
+  heapTotal: 6090752,
+  heapUsed: 4545680,
+  external: 1590181,
+  arrayBuffers: 10511
+}
+All arguments: [
+  'C:\\Program Files\\nodejs\\node.exe',
+  'C:\\Users\\M. Mohamed Al Favaj\\OneDrive\\Desktop\\Java-Script-Training\\nodejs\\session1\\process-demo.js',
+  'hello'
+]
+Your input: hello
+NODE_ENV: undefined
+HOME: C:\Users\M. Mohamed Al Favaj
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> node process-demo.js "my name is Node"
+Node version: v24.12.0
+Platform: win32
+Current directory: C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1
+Memory usage: {
+  rss: 36007936,
+  heapTotal: 6090752,
+  heapUsed: 4545608,
+  external: 1590181,
+  arrayBuffers: 10511
+}
+All arguments: [
+  'C:\\Program Files\\nodejs\\node.exe',
+  'C:\\Users\\M. Mohamed Al Favaj\\OneDrive\\Desktop\\Java-Script-Training\\nodejs\\session1\\process-demo.js',
+  'my name is Node'
+]
+Your input: my name is Node
+NODE_ENV: undefined
+HOME: C:\Users\M. Mohamed Al Favaj
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> $env:NODE_ENV="production"
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> node process-demo.js
+Node version: v24.12.0
+Platform: win32
+Current directory: C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1
+Memory usage: {
+  rss: 36061184,
+  heapTotal: 6090752,
+  heapUsed: 4545608,
+  external: 1590181,
+  arrayBuffers: 10511
+}
+All arguments: [
+  'C:\\Program Files\\nodejs\\node.exe',
+  'C:\\Users\\M. Mohamed Al Favaj\\OneDrive\\Desktop\\Java-Script-Training\\nodejs\\session1\\process-demo.js'
+]
+Your input: undefined
+NODE_ENV: production
+HOME: C:\Users\M. Mohamed Al Favaj
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> node read-json.js
+All users: [
+  { id: 1, name: 'Rahul', role: 'intern' },
+  { id: 2, name: 'Priya', role: 'intern' },
+  { id: 3, name: 'Amit', role: 'intern' }
+]
+First user: Rahul
+Interns: [ 'Rahul', 'Priya', 'Amit' ]
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> node paths.js
+Directory name: C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1
+File name: C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1\paths.js
+Joined path: C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1\data\users.json
+Extension: .html
+Basename: notes.txt
+Dirname: /users/rahul
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> node system-info.js
+Platform: win32
+Architecture: x64
+Hostname: LAPTOP-AEPONDQJ
+Home directory: C:\Users\M. Mohamed Al Favaj
+CPUs: 12
+Total memory (MB): 16013
+Free memory (MB): 2881
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm init -y
+Wrote to C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1\package.json:
+
+{
+  "name": "session1",
+  "version": "1.0.0",
+  "description": "Node.js Session 1 Activity Tasks",
+  "main": "hello.js",
+  "scripts": {
+    "start": "node dates.js",
+    "hello": "node hello.js",
+    "info": "node system-info.js",
+    "dev": "nodemon dates.js"
+  },
+  "keywords": [],
+  "author": "Mohamed Al Favaj M",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.18"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
+  "type": "commonjs"
+}
+
+
+
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> NOTES.md
+NOTES.md : The term 'NOTES.md' is not recognized as the name of a cmdlet, function, script file, or operable 
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ NOTES.md
++ ~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (NOTES.md:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+ 
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm install dayjs
+
+removed 28 packages, and audited 2 packages in 2s
+
+found 0 vulnerabilities
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> node dates.js
+Today: 03 Jul 2026
+Day of week: Friday
+Next week: 10 Jul 2026
+Is before 2030? true
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm start
+
+> session1@1.0.0 start
+> node dates.js
+
+Today: 03 Jul 2026
+Day of week: Friday
+Next week: 10 Jul 2026
+Is before 2030? true
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> ## Section 5 — dependencies vs devDependencies
+>> 
+>> ### Task 5.1 — Install a devDependency
+>> 
+>> Install `nodemon` as a dev dependency:
+>> 
+>> ```bash
+>> npm install nodemon --save-dev
+>> ```
+>> 
+>> Open `package.json` and observe that `nodemon` appears under `devDependencies`, not `dependencies`.
+>> 
+>> Add a dev script:
+>> ```json
+>> "scripts": {
+>>   "start": "node dates.js",
+>>   "dev": "nodemon dates.js"
+>> }
+>> ```
+>> 
+>> Run it:
+>> ```bash
+>> npm run dev
+>> ```
+>> 
+>> Make a small change to `dates.js` — change the format string — and save the file. Watch the terminal restart automatically.
+>> 
+>> **Write a comment** in `NOTES.md` explaining the difference between `dependencies` and `devDependencies` and why `nodemon` belongs in `devDependencies`.
+>> 
+>> ---
+>> 
+>> ### Task 5.2 — node_modules & .gitignore
+>> 
+>> Open your `.gitignore` file and confirm `node_modules/` is listed.
+>> 
+>> Run:
+>> ```bash
+>> git status
+>> ```
+>> 
+>> **Observe:** `node_modules/` should not appear in the list of files to be committed.
+>> 
+>> Now delete the `node_modules` folder entirely and run:
+>> ```bash
+>> npm install
+>> ```
+>> 
+>> **Observe:** Everything is restored automatically from `package.json`.
+>> 
+>> 🔍 **Explore:** Open `package-lock.json`. What is the difference between `package.json` and `package-lock.json`? Write your answer in `NOTES.md`.
+>> 
+>> ---
+>> 
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm install nodemon --save-dev
+
+up to date, audited 2 packages in 2s
+
+found 0 vulnerabilities
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm run dev
+npm error Missing script: "dev"
+npm error
+npm error To see a list of scripts, run:
+npm error   npm run
+npm error A complete log of this run can be found in: C:\Users\M. Mohamed Al Favaj\AppData\Local\npm-cache\_logs\2026-07-03T11_49_11_440Z-debug-0.log
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm run
+Lifecycle scripts included in session1@1.0.0:
+  start
+    node dates.js
+available via `npm run`:
+  hello
+    node hello.js
+  info
+    node system-info.js
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm run
+Lifecycle scripts included in session1@1.0.0:
+  start
+    node dates.js
+available via `npm run`:
+  hello
+    node hello.js
+  info
+    node system-info.js
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm list nodemon
+session1@1.0.0 C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1
+└── (empty)
+
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm install nodemon --save-dev
+
+up to date, audited 2 packages in 1s
+
+found 0 vulnerabilities
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm list nodemon
+session1@1.0.0 C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1
+└── (empty)
+
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm install nodemon --save-dev
+
+up to date, audited 2 packages in 1s
+
+found 0 vulnerabilities
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm ls
+session1@1.0.0 C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1
+└── dayjs@1.11.21
+
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> dir node_modules
+
+
+    Directory: C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1\node_modules
+
+
+Mode                 LastWriteTime         Length Name                                                               
+----                 -------------         ------ ----                                                               
+dar--l        03-07-2026     17:16                .bin                                                               
+dar--l        03-07-2026     14:22                dayjs                                                              
+-a---l        03-07-2026     17:26            403 .package-lock.json                                                 
+
+
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> Remove-Item -Recurse -Force node_modules
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> Remove-Item package-lock.json
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm install
+
+added 1 package, and audited 2 packages in 3s
+
+found 0 vulnerabilities
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm ls
+session1@1.0.0 C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1
+└── dayjs@1.11.21
+
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm config get production
+null
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> dir node_modules
+
+
+    Directory: C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1\node_modules
+
+
+Mode                 LastWriteTime         Length Name                                                               
+----                 -------------         ------ ----                                                               
+d-----        03-07-2026     17:28                dayjs                                                              
+-a----        03-07-2026     17:28            403 .package-lock.json                                                 
+
+
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm install --save-dev nodemon
+
+up to date, audited 2 packages in 1s
+
+found 0 vulnerabilities
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm ls
+session1@1.0.0 C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1
+└── dayjs@1.11.21
+
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm install nodemon@latest --save-dev --verbose
+npm verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+npm info using npm@11.6.2
+npm info using node@v24.12.0
+npm verbose title npm install nodemon@latest
+npm verbose argv "install" "nodemon@latest" "--save-dev" "--loglevel" "verbose"
+npm verbose logfile logs-max:10 dir:C:\Users\M. Mohamed Al Favaj\AppData\Local\npm-cache\_logs\2026-07-03T12_00_31_016Z-
+npm verbose logfile C:\Users\M. Mohamed Al Favaj\AppData\Local\npm-cache\_logs\2026-07-03T12_00_31_016Z-debug-0.log
+npm http fetch GET 200 https://registry.npmjs.org/nodemon 536ms (cache miss)
+npm http cache https://registry.npmjs.org/nodemon 21ms (cache hit)
+npm http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 323ms
+
+up to date, audited 2 packages in 2s
+
+found 0 vulnerabilities
+npm verbose cwd C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1
+npm verbose os Windows_NT 10.0.26200
+npm verbose node v24.12.0
+npm verbose npm  v11.6.2
+npm verbose exit 0
+npm info ok
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm config list
+; "builtin" config from C:\Program Files\nodejs\node_modules\npm\npmrc
+
+prefix = "C:\\Users\\M. Mohamed Al Favaj\\AppData\\Roaming\\npm"
+
+; node bin location = C:\Program Files\nodejs\node.exe
+; node version = v24.12.0
+; npm local prefix = C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1
+; npm version = 11.6.2
+; cwd = C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1
+; HOME = C:\Users\M. Mohamed Al Favaj
+; Run `npm config ls -l` to show all defaults.
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm ls                         
+session1@1.0.0 C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1
+└── dayjs@1.11.21
+
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm install --save-dev nodemon
+>> 
+>> up to date, audited 2 packages in 1s
+>> 
+>> found 0 vulnerabilities
+>> PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm ls
+>> session1@1.0.0 C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1
+>> └── dayjs@1.11.21
+>> 
+>> PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm install nodemon@latest --save-dev --verbose
+>> npm verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+>> npm info using npm@11.6.2
+>> npm info using node@v24.12.0
+>> npm verbose title npm install nodemon@latest
+>> npm verbose argv "install" "nodemon@latest" "--save-dev" "--loglevel" "verbose"
+>> npm verbose logfile logs-max:10 dir:C:\Users\M. Mohamed Al Favaj\AppData\Local\npm-cache\_logs\2026-07-03T12_00_31_016Z-
+>> npm verbose logfile C:\Users\M. Mohamed Al Favaj\AppData\Local\npm-cache\_logs\2026-07-03T12_00_31_016Z-debug-0.log
+>> npm http fetch GET 200 https://registry.npmjs.org/nodemon 536ms (cache miss)
+>> npm http cache https://registry.npmjs.org/nodemon 21ms (cache hit)
+>> npm http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 323ms
+>> 
+>> up to date, audited 2 packages in 2s
+>> 
+>> found 0 vulnerabilities
+>> npm verbose cwd C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1
+>> npm verbose os Windows_NT 10.0.26200
+>> npm verbose node v24.12.0
+>> npm verbose npm  v11.6.2
+>> npm verbose exit 0
+>> npm info ok
+>> PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm config list
+>> ; "builtin" config from C:\Program Files\nodejs\node_modules\npm\npmrc
+>> 
+>> prefix = "C:\\Users\\M. Mohamed Al Favaj\\AppData\\Roaming\\npm"
+>> 
+>> ; node bin location = C:\Program Files\nodejs\node.exe
+>> ; node version = v24.12.0
+>> ; npm local prefix = C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1
+>> ; npm version = 11.6.2
+>> ; cwd = C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1
+>> ; HOME = C:\Users\M. Mohamed Al Favaj
+>> ; Run `npm config ls -l` to show all defaults.
+>> PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm ls                         
+>> session1@1.0.0 C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1
+>> └── dayjs@1.11.21
+>> 
+>> PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> 
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> type package.json
+{
+  "name": "session1",
+  "version": "1.0.0",
+  "description": "Node.js Session 1 Activity Tasks",
+  "main": "hello.js",
+  "scripts": {
+    "start": "node dates.js",
+    "hello": "node hello.js",
+    "info": "node system-info.js",
+    "dev": "nodemon dates.js"
+  },
+  "keywords": [],
+  "author": "Mohamed Al Favaj M",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.21"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm ls
+session1@1.0.0 C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1
+└── dayjs@1.11.21
+
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm install --include=dev
+
+added 28 packages, and audited 30 packages in 1s
+
+5 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm ls                   
+session1@1.0.0 C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1
+└── dayjs@1.11.21
+
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm install nodemon --save-dev --force
+npm warn using --force Recommended protections disabled.
+
+removed 28 packages, and audited 2 packages in 2s
+
+found 0 vulnerabilities
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm ls
+session1@1.0.0 C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1
+└── dayjs@1.11.21
+
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm install nodemon
+
+up to date, audited 2 packages in 1s
+
+found 0 vulnerabilities
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npx nodemon dates.js
+Need to install the following packages:
+nodemon@3.1.14
+Ok to proceed? (y) y
+
+[nodemon] 3.1.14
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching path(s): *.*
+[nodemon] watching extensions: js,mjs,cjs,json
+[nodemon] starting `node dates.js`
+Today: 03 Jul 2026
+Day of week: Friday
+Next week: 10 Jul 2026
+Is before 2030? true
+[nodemon] clean exit - waiting for changes before restart
+
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm install nodemontype package.json
+npm error code E404
+npm error 404 Not Found - GET https://registry.npmjs.org/nodemontype - Not found
+npm error 404
+npm error 404  The requested resource 'nodemontype@*' could not be found or you do not have permission to access it.
+npm error 404
+npm error 404 Note that you can also install from a
+npm error 404 tarball, folder, http url, or git url.
+npm error A complete log of this run can be found in: C:\Users\M. Mohamed Al Favaj\AppData\Local\npm-cache\_logs\2026-07-03T12_06_48_566Z-debug-0.log
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm install --include=dev
+
+added 28 packages, and audited 30 packages in 1s
+
+5 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        ../
+
+nothing added to commit but untracked files present (use "git add" to track)
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> Remove-Item -Recurse -Force node_modules
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm install
+npm error code EJSONPARSE
+npm error JSON.parse Invalid package.json: JSONParseError: Unexpected non-whitespace character after JSON at position 462 (line 22 column 1) while parsing near "... \"^3.1.14\"\r\n  }\r\n}\r\n//Dependencies are p..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Note: package.json must be actual JSON, not just JavaScript.
+npm error A complete log of this run can be found in: C:\Users\M. Mohamed Al Favaj\AppData\Local\npm-cache\_logs\2026-07-03T12_10_04_764Z-debug-0.log
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> npm install
+
+added 1 package, and audited 2 packages in 3s
+
+found 0 vulnerabilities
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> node report.js intern
+Report generated on: 03 Jul 2026
+Role: intern
+--------------------
+1. Rahul (ID: 1)
+2. Priya (ID: 2)
+3. Amit (ID: 3)
+--------------------
+Total: 3 user(s) found
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> node report.js intern
+Report generated on: 03 Jul 2026
+Role: intern
+--------------------
+1. Rahul (ID: 1)
+2. Priya (ID: 2)
+3. Amit (ID: 3)
+--------------------
+Total: 3 user(s) found
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> node self-learning.js
+Enter your name: File Content: Hello from Async File System!
+Updated Content:
+Hello from Async File System!
+This line was added using async/await.
+Enter your name: Favaj
+Hello, Enter your name: Favaj!
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session1> 
