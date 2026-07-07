@@ -1,0 +1,167 @@
+Line 1 — written by Node.js
+Line 2 — appended
+Line 3 — appended again
+
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> node nodejs/session2/path-demo.js
+node:internal/modules/run_main:76
+  const type = getNearestParentPackageJSONType(mainPath);
+               ^
+
+Error: Invalid package config \\?\C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session2\package.json.
+    at shouldUseESMLoader (node:internal/modules/run_main:76:16)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:147:20)
+    at node:internal/main/run_main_module:33:47 {
+  code: 'ERR_INVALID_PACKAGE_CONFIG'
+}
+
+Node.js v24.12.0
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> node --version
+v24.12.0
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> npm --version
+11.6.2
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> npm init -y
+Wrote to C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\package.json:
+
+{
+  "name": "java-script-training",
+  "version": "1.0.0",
+  "description": "This repository contains internship training assignments, activities, and projects completed as part of the training program.",
+  "main": "js-session1-assignment.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Favaj06/Java-Script-Training.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Favaj06/Java-Script-Training/issues"
+  },
+  "homepage": "https://github.com/Favaj06/Java-Script-Training#readme"
+}
+
+
+
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> node nodejs/session2/path-demo.js
+Current directory: C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session2
+Current file:      C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session2\path-demo.js
+Joined path: C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session2\data\users.json
+Basename: notes.txt
+Extension: .html
+Dirname:   /home/user
+Manual:     C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session2/data/users.json
+path.join:  C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session2\data\users.json
+Resolved:   C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\data\users.json
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> node nodejs/session2/os-demo.js  
+Platform:      win32
+Architecture:  x64
+Hostname:      LAPTOP-AEPONDQJ
+Home dir:      C:\Users\M. Mohamed Al Favaj
+CPU cores:     12
+Memory: 3492MB free of 16013MB
+Running on Windows
+Memory OK — 22% free
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> node nodejs/session2/server-basic.js
+Server running at http://localhost:3000
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> node nodejs/session2/server-basic.js
+Server running at http://localhost:3000
+GET /
+GET /
+GET /about
+GET /users
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> node nodejs/session2/server-routes.js
+Server running at http://localhost:3001
+GET /
+GET /favicon.ico
+GET /about
+GET /status
+GET /anything%60
+GET /anything
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> node nodejs/session2/files.js
+File written
+Content: Line 1 — written by Node.js
+Updated:
+ Line 1 — written by Node.js
+Line 2 — appended
+Line 3 — appended again
+File does not exist — creating it
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> node nodejs/session2/async-demo.js
+1 — before sync read
+2 — sync read done: 3 lines
+3 — after sync read
+---
+4 — before async read
+5 — after async read (does not wait)
+6 — async read done: 3 lines
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> node nodejs/session2/files.js
+C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training\nodejs\session2\files.js:42
+const checkPath = path.join(__dirname, 'missing.txt')
+      ^
+
+SyntaxError: Identifier 'checkPath' has already been declared
+    at wrapSafe (node:internal/modules/cjs/loader:1692:18)
+    at Module._compile (node:internal/modules/cjs/loader:1735:20)
+    at Object..js (node:internal/modules/cjs/loader:1893:10)
+    at Module.load (node:internal/modules/cjs/loader:1481:32)
+    at Module._load (node:internal/modules/cjs/loader:1300:12)
+    at TracingChannel.traceSync (node:diagnostics_channel:328:14)
+    at wrapModuleLoad (node:internal/modules/cjs/loader:245:24)
+    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)
+    at node:internal/main/run_main_module:33:47
+
+Node.js v24.12.0
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> node nodejs/session2/json-demo.js
+All users: [
+  { id: 1, name: 'Rahul', role: 'intern', score: 85 },
+  { id: 2, name: 'Priya', role: 'intern', score: 92 },
+  { id: 3, name: 'Amit', role: 'intern', score: 78 },
+  { id: 4, name: 'Sneha', role: 'intern', score: 95 }
+]
+Total: 4
+Top scorers: [ 'Priya', 'Sneha' ]
+Average score: 87.5
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> node nodejs/session2/json-demo.js
+All users: [
+  { id: 1, name: 'Rahul', role: 'intern', score: 85 },
+  { id: 2, name: 'Priya', role: 'intern', score: 92 },
+  { id: 3, name: 'Amit', role: 'intern', score: 78 },
+  { id: 4, name: 'Sneha', role: 'intern', score: 95 }
+]
+Total: 4
+Top scorers: [ 'Priya', 'Sneha' ]
+Average score: 87.5
+User added and file updated
+Total after update: 5
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> node nodejs/session2/json-demo.js
+All users: [
+  { id: 1, name: 'Rahul', role: 'intern', score: 85 },
+  { id: 2, name: 'Priya', role: 'intern', score: 92 },
+  { id: 3, name: 'Amit', role: 'intern', score: 78 },
+  { id: 4, name: 'Sneha', role: 'intern', score: 95 },
+  { id: 5, name: 'Vikram', role: 'intern', score: 88 }
+]
+Total: 5
+Top scorers: [ 'Priya', 'Sneha' ]
+Average score: 87.6
+User added and file updated
+Total after update: 6
+Amit score updated to 90
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> node nodejs/session2/server.js
+Server running at http://localhost:3000
+GET /
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> node nodejs/session2/server.js
+Server running at http://localhost:3000
+GET /
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> node nodejs/session2/server.js
+Server running at http://localhost:3000
+GET /users
+GET /users/1
+GET /users/top
+GET /health
+GET /test
+GET /users/100
+PS C:\Users\M. Mohamed Al Favaj\OneDrive\Desktop\Java-Script-Training> 
