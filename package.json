@@ -1,0 +1,21 @@
+{
+  "name": "java-script-training",
+  "version": "1.0.0",
+  "description": "This repository contains internship training assignments, activities, and projects completed as part of the training program.",
+  "main": "js-session1-assignment.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Favaj06/Java-Script-Training.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Favaj06/Java-Script-Training/issues"
+  },
+  "homepage": "https://github.com/Favaj06/Java-Script-Training#readme"
+}
