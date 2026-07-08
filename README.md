@@ -10,9 +10,15 @@ JAVA-SCRIPT-TRAINING/
 ├── typescript/
 ├── html-css/
 │   └── session1/
+    └── session2/
+├── nodejs/
+    └── session1/
+    └── session2/
 ├── js-session1-assignment.js
 ├── js-session2-activities.js
 ├── js-session2-activity8.js
+├── package-lock.json
+├── package.json
 └── README.md
 
 TypeScript
