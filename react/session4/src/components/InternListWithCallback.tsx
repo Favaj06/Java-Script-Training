@@ -9,7 +9,7 @@ interface InternRowProps {
   onRemove: (id: number) => void
 }
 
-const InternRow = memo(function InternRow({
+export const InternRow = memo(function InternRow({
   id,
   name,
   score,
