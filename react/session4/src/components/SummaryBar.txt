@@ -1,0 +1,14 @@
+/*
+Task 4.1
+
+Dependencies used by ScoreStats:
+
+1. useInterns() - Reads intern data from InternContext.
+2. useMemo() - Caches calculated statistics.
+
+The dependency that can make the test slow or non-repeatable
+is useInterns(), because the real InternProvider loads data
+asynchronously using setTimeout().
+
+Mocking useInterns() keeps the test fast, isolated and repeatable.
+*/

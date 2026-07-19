@@ -4,6 +4,8 @@ import Navbar from './Navbar'
 
 describe('Navbar', () => {
   test('renders the dashboard title', () => {
+    expect.hasAssertions()
+
     render(<Navbar />)
 
     expect(screen.getByText('Intern Dashboard')).toBeInTheDocument()
@@ -44,6 +46,7 @@ Navbar will not be wrapped with ThemeProvider.
 Since Navbar uses useTheme(), React throws a context error.
 Always use render from test-utils.
 */
+
 import { render as rtlRender } from '@testing-library/react'
 import { ThemeProvider } from '../contexts/theme-context'
 

@@ -2,6 +2,8 @@ import { render, screen } from '../test/test-utils'
 import ScoreStats from './ScoreStats'
 
 test('renders score statistics heading', () => {
+  expect.hasAssertions()
+
   render(<ScoreStats />)
 
   expect(
@@ -10,6 +12,8 @@ test('renders score statistics heading', () => {
 })
 
 test('shows highest, lowest and average scores', () => {
+  expect.hasAssertions()
+
   render(<ScoreStats />)
 
   expect(
@@ -26,6 +30,8 @@ test('shows highest, lowest and average scores', () => {
 })
 
 test('shows passing intern count', () => {
+  expect.hasAssertions()
+
   render(<ScoreStats />)
 
   expect(
