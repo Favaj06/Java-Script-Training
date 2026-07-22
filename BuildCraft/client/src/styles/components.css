@@ -1,0 +1,58 @@
+/* =========================
+   BUILDCRAFT BUTTONS
+========================= */
+
+.btn-primary-custom {
+  background: linear-gradient(135deg, #2563EB, #1D4ED8);
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.25);
+}
+
+.btn-primary-custom:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(37, 99, 235, 0.35);
+}
+
+.btn-outline-custom {
+  background: transparent;
+  border: 2px solid #2563EB;
+  color: #2563EB;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+  background: #2563EB;
+  color: white;
+}
+
+/* =========================
+   BUILDCRAFT CARD
+========================= */
+
+.bc-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.bc-card:hover {
+  transform: translateY(-6px);
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+  padding: 80px 0;
+}
