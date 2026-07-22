@@ -1,0 +1,28 @@
+import { useTheme } from '../contexts/theme-context'
+
+function Navbar() {
+  const { theme, toggleTheme } = useTheme()
+
+  return (
+    <nav
+      style={{
+        background: theme === 'light' ? '#f5f5f5' : '#1a1a1a',
+        color: theme === 'light' ? '#000' : '#fff',
+        padding: '12px 24px',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+      }}
+    >
+      <h1 style={{ margin: 0, fontSize: '24px' }}>
+        Intern Dashboard
+      </h1>
+
+      <button onClick={toggleTheme}>
+        Switch to {theme === 'light' ? 'Dark' : 'Light'} Mode
+      </button>
+    </nav>
+  )
+}
+
+export default Navbar
