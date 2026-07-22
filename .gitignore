@@ -1,0 +1,17 @@
+# Node
+node_modules/
+**/node_modules/
+
+# Environment
+.env
+**/.env
+
+# Python
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# Build outputs
+dist/git rm -r --cached BuildCraft/client/node_modules
