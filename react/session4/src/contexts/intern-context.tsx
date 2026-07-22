@@ -23,15 +23,16 @@ interface InternContextType {
 
 const InternContext = createContext<InternContextType | null>(null)
 
-// Theme and intern data are stored in separate contexts because they
-// represent different responsibilities. Keeping them separate makes the
-// application easier to maintain and avoids unnecessary re-renders.
-export function InternProvider({ children }: { children: ReactNode }) {
+export function InternProvider({
+  children,
+}: {
+  children: ReactNode
+}) {
   const [interns, setInterns] = useState<Intern[]>([])
-  const [isLoading, setIsLoading] = useState<boolean>(true)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setInterns([
         {
           id: 1,
@@ -65,13 +66,15 @@ export function InternProvider({ children }: { children: ReactNode }) {
 
       setIsLoading(false)
     }, 800)
+
+    return () => clearTimeout(timer)
   }, [])
 
-  function addIntern(intern: Intern): void {
+  function addIntern(intern: Intern) {
     setInterns((prev) => [...prev, intern])
   }
 
-  function removeIntern(id: number): void {
+  function removeIntern(id: number) {
     setInterns((prev) => prev.filter((intern) => intern.id !== id))
   }
 
@@ -93,12 +96,10 @@ export function useInterns(): InternContextType {
   const context = useContext(InternContext)
 
   if (!context) {
-    throw new Error('useInterns must be used inside InternProvider')
+    throw new Error(
+      'useInterns must be used inside InternProvider'
+    )
   }
 
   return context
 }
-
-// Theme and intern data are stored in separate contexts because they have
-// different responsibilities. Keeping them separate improves organization,
-// makes the code easier to maintain, and avoids unnecessary re-renders.

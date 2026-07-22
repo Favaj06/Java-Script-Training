@@ -11,9 +11,12 @@ function Navbar() {
         padding: '12px 24px',
         display: 'flex',
         justifyContent: 'space-between',
+        alignItems: 'center',
       }}
     >
-      <span>Intern Dashboard</span>
+      <h1 style={{ margin: 0, fontSize: '24px' }}>
+        Intern Dashboard
+      </h1>
 
       <button onClick={toggleTheme}>
         Switch to {theme === 'light' ? 'Dark' : 'Light'} Mode
