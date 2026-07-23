@@ -22,8 +22,7 @@ test('fake timers example', () => {
 // It is useful when the same text appears multiple times on the page.
 
 //SL-4 — Tab Navigation
-import { render, screen, within } from '../test/test-utils'
-import { InternRow } from '../components/InternListWithCallback'
+import { render, screen } from '../test/test-utils'
 
 /*
 SL-3 – within()

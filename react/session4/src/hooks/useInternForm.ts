@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 interface InternFormState {
   name: string
-  score: number
+  score: number | ''
   isPresent: boolean
   role: string
 }
@@ -42,8 +42,10 @@ function useInternForm(): UseInternFormReturn {
         type === 'checkbox'
           ? (e.target as HTMLInputElement).checked
           : name === 'score'
-          ? Number(value)
-          : value,
+            ? value === ''
+              ? ''
+              : Number(value)
+            : value,
     }))
   }
 
@@ -58,7 +60,7 @@ function useInternForm(): UseInternFormReturn {
       return false
     }
 
-    if (form.score < 0 || form.score > 100) {
+    if (form.score === '' || form.score < 0 || form.score > 100) {
       setError('Score must be between 0 and 100')
       return false
     }
