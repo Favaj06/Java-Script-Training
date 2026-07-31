@@ -1,6 +1,12 @@
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
+import {
+  createContext,
+  useContext,
+  useState,
+  useEffect,
+  type ReactNode,
+} from 'react'
 
-interface Intern {
+export interface Intern {
   id: number
   name: string
   score: number
@@ -15,51 +21,71 @@ interface InternContextType {
   removeIntern: (id: number) => void
 }
 
+interface InternProviderProps {
+  children: ReactNode
+  initialInterns?: Intern[]
+  loadDelay?: number
+}
+
+export const defaultInterns: Intern[] = [
+  {
+    id: 1,
+    name: 'Rahul',
+    score: 92,
+    role: 'Frontend',
+    isPresent: true,
+  },
+  {
+    id: 2,
+    name: 'Priya',
+    score: 78,
+    role: 'Backend',
+    isPresent: true,
+  },
+  {
+    id: 3,
+    name: 'Amit',
+    score: 45,
+    role: 'Frontend',
+    isPresent: false,
+  },
+  {
+    id: 4,
+    name: 'Sneha',
+    score: 95,
+    role: 'Fullstack',
+    isPresent: true,
+  },
+]
+
 const InternContext = createContext<InternContextType | null>(null)
 
 // Theme and intern data are stored in separate contexts because they
 // represent different responsibilities. Keeping them separate makes the
 // application easier to maintain and avoids unnecessary re-renders.
-export function InternProvider({ children }: { children: ReactNode }) {
+export function InternProvider({
+  children,
+  initialInterns = defaultInterns,
+  loadDelay = 800,
+}: InternProviderProps) {
   const [interns, setInterns] = useState<Intern[]>([])
   const [isLoading, setIsLoading] = useState<boolean>(true)
 
   useEffect(() => {
-    setTimeout(() => {
-      setInterns([
-        {
-          id: 1,
-          name: 'Rahul',
-          score: 92,
-          role: 'Frontend',
-          isPresent: true,
-        },
-        {
-          id: 2,
-          name: 'Priya',
-          score: 78,
-          role: 'Backend',
-          isPresent: true,
-        },
-        {
-          id: 3,
-          name: 'Amit',
-          score: 45,
-          role: 'Frontend',
-          isPresent: false,
-        },
-        {
-          id: 4,
-          name: 'Sneha',
-          score: 95,
-          role: 'Fullstack',
-          isPresent: true,
-        },
-      ])
-
+    function loadInterns(): void {
+      setInterns([...initialInterns])
       setIsLoading(false)
-    }, 800)
-  }, [])
+    }
+
+    if (loadDelay <= 0) {
+      loadInterns()
+      return
+    }
+
+    const timeoutId = window.setTimeout(loadInterns, loadDelay)
+
+    return () => window.clearTimeout(timeoutId)
+  }, [initialInterns, loadDelay])
 
   function addIntern(intern: Intern): void {
     setInterns((prev) => [...prev, intern])
@@ -96,3 +122,11 @@ export function useInterns(): InternContextType {
 // Theme and intern data are stored in separate contexts because they have
 // different responsibilities. Keeping them separate improves organization,
 // makes the code easier to maintain, and avoids unnecessary re-renders.
+
+// Dependency Injection audit:
+// ID generation remains inside AddInternForm because this codebase already
+// creates IDs at the form boundary when a user submits a new intern.
+// Injecting initialInterns fits better here because InternProvider owns the
+// initial intern list and loading delay. The default props preserve existing
+// runtime behavior, while tests and alternate screens can provide controlled
+// data without mocking the context module.

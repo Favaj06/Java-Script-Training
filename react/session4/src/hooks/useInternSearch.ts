@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react'
 
-interface Intern {
+export interface SearchableIntern {
   id: number
   name: string
   score: number
@@ -8,10 +8,15 @@ interface Intern {
   isPresent: boolean
 }
 
+export type InternFilter = (
+  interns: SearchableIntern[],
+  search: string
+) => SearchableIntern[]
+
 interface UseInternSearchReturn {
   search: string
   setSearch: (value: string) => void
-  filtered: Intern[]
+  filtered: SearchableIntern[]
   stats: {
     total: number
     present: number
@@ -19,15 +24,24 @@ interface UseInternSearchReturn {
   }
 }
 
-function useInternSearch(interns: Intern[]): UseInternSearchReturn {
+export function defaultFilter(
+  interns: SearchableIntern[],
+  search: string
+): SearchableIntern[] {
+  return interns.filter((intern) =>
+    intern.name.toLowerCase().includes(search.toLowerCase())
+  )
+}
+
+function useInternSearch(
+  interns: SearchableIntern[],
+  filterFn: InternFilter = defaultFilter
+): UseInternSearchReturn {
   const [search, setSearch] = useState<string>('')
 
   const filtered = useMemo(
-    () =>
-      interns.filter((intern) =>
-        intern.name.toLowerCase().includes(search.toLowerCase())
-      ),
-    [interns, search]
+    () => filterFn(interns, search),
+    [interns, search, filterFn]
   )
 
   const stats = useMemo(
@@ -59,3 +73,8 @@ export default useInternSearch
 // even if the interns list hasn't changed. Using useMemo caches the
 // filtered result and recalculates it only when interns or search changes,
 // improving performance.
+
+// Dependency Injection finding:
+// defaultFilter preserves the existing name-search behavior. Passing a
+// custom filterFn lets tests or future screens inject alternate filtering
+// logic without changing the hook's state management or statistics logic.

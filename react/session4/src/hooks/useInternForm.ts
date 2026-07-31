@@ -1,10 +1,24 @@
 import { useState } from 'react'
+import { validateInternForm } from '../utils/intern-validation'
 
 interface InternFormState {
   name: string
   score: number
   isPresent: boolean
   role: string
+}
+
+interface InternSubmission {
+  id: number
+  name: string
+  score: number
+  isPresent: boolean
+  role: string
+}
+
+interface UseInternFormOptions {
+  addIntern?: (intern: InternSubmission) => void
+  generateId?: () => number
 }
 
 interface UseInternFormReturn {
@@ -15,6 +29,7 @@ interface UseInternFormReturn {
   ) => void
   handleReset: () => void
   isValid: () => boolean
+  handleSubmit: () => boolean
 }
 
 const initialForm: InternFormState = {
@@ -24,11 +39,18 @@ const initialForm: InternFormState = {
   role: 'Frontend',
 }
 
+function defaultGenerateId(): number {
+  return Date.now()
+}
+
 // Defining a return type interface makes the hook easier to understand,
 // improves TypeScript type checking, and ensures every component using
 // this hook receives the expected values and functions.
-function useInternForm(): UseInternFormReturn {
-  const [form, setForm] = useState(initialForm)
+function useInternForm({
+  addIntern,
+  generateId = defaultGenerateId,
+}: UseInternFormOptions = {}): UseInternFormReturn {
+  const [form, setForm] = useState<InternFormState>(initialForm)
   const [error, setError] = useState('')
 
   function handleChange(
@@ -36,7 +58,7 @@ function useInternForm(): UseInternFormReturn {
   ): void {
     const { name, value, type } = e.target
 
-    setForm(prev => ({
+    setForm((prev) => ({
       ...prev,
       [name]:
         type === 'checkbox'
@@ -48,22 +70,29 @@ function useInternForm(): UseInternFormReturn {
   }
 
   function handleReset(): void {
-    setForm(initialForm)
+    setForm({ ...initialForm })
     setError('')
   }
 
   function isValid(): boolean {
-    if (!form.name.trim()) {
-      setError('Name is required')
+    const validationError = validateInternForm(form.name, form.score)
+    setError(validationError ?? '')
+    return validationError === null
+  }
+
+  function handleSubmit(): boolean {
+    if (!isValid()) {
       return false
     }
 
-    if (form.score < 0 || form.score > 100) {
-      setError('Score must be between 0 and 100')
-      return false
+    if (addIntern) {
+      addIntern({
+        id: generateId(),
+        ...form,
+      })
     }
 
-    setError('')
+    handleReset()
     return true
   }
 
@@ -73,6 +102,7 @@ function useInternForm(): UseInternFormReturn {
     handleChange,
     handleReset,
     isValid,
+    handleSubmit,
   }
 }
 
