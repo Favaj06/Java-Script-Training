@@ -1,12 +1,6 @@
 import { useState } from 'react'
-import { validateInternForm } from '../utils/intern-validation'
-
-interface InternFormState {
-  name: string
-  score: number
-  isPresent: boolean
-  role: string
-}
+import { validateInternForm } from '../services/intern-service'
+import type { InternFormState } from '../types/intern'
 
 interface InternSubmission {
   id: number
@@ -75,7 +69,7 @@ function useInternForm({
   }
 
   function isValid(): boolean {
-    const validationError = validateInternForm(form.name, form.score)
+    const validationError = validateInternForm(form)
     setError(validationError ?? '')
     return validationError === null
   }

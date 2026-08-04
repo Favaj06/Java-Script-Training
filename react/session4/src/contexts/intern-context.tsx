@@ -1,3 +1,4 @@
+import type { Intern } from '../types/intern'
 import {
   createContext,
   useContext,
@@ -5,14 +6,6 @@ import {
   useEffect,
   type ReactNode,
 } from 'react'
-
-export interface Intern {
-  id: number
-  name: string
-  score: number
-  role: string
-  isPresent: boolean
-}
 
 interface InternContextType {
   interns: Intern[]
@@ -69,7 +62,7 @@ export function InternProvider({
   loadDelay = 800,
 }: InternProviderProps) {
   const [interns, setInterns] = useState<Intern[]>([])
-  const [isLoading, setIsLoading] = useState<boolean>(true)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     function loadInterns(): void {

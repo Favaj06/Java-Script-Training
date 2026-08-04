@@ -1,4 +1,8 @@
 import { useState, useMemo } from 'react'
+import {
+  filterInterns,
+  calculateAverageScore,
+} from '../services/intern-service'
 
 export interface SearchableIntern {
   id: number
@@ -28,16 +32,14 @@ export function defaultFilter(
   interns: SearchableIntern[],
   search: string
 ): SearchableIntern[] {
-  return interns.filter((intern) =>
-    intern.name.toLowerCase().includes(search.toLowerCase())
-  )
+  return filterInterns(interns, search)
 }
 
 function useInternSearch(
   interns: SearchableIntern[],
   filterFn: InternFilter = defaultFilter
 ): UseInternSearchReturn {
-  const [search, setSearch] = useState<string>('')
+  const [search, setSearch] = useState('')
 
   const filtered = useMemo(
     () => filterFn(interns, search),
@@ -48,13 +50,7 @@ function useInternSearch(
     () => ({
       total: interns.length,
       present: interns.filter((intern) => intern.isPresent).length,
-      avg:
-        interns.length > 0
-          ? Math.round(
-              interns.reduce((sum, intern) => sum + intern.score, 0) /
-                interns.length
-            )
-          : 0,
+      avg: calculateAverageScore(interns),
     }),
     [interns]
   )
@@ -68,6 +64,7 @@ function useInternSearch(
 }
 
 export default useInternSearch
+
 // Finding:
 // Without useMemo, the filtering logic runs on every component render,
 // even if the interns list hasn't changed. Using useMemo caches the
@@ -75,6 +72,6 @@ export default useInternSearch
 // improving performance.
 
 // Dependency Injection finding:
-// defaultFilter preserves the existing name-search behavior. Passing a
-// custom filterFn lets tests or future screens inject alternate filtering
+// defaultFilter preserves the existing behavior. Passing a custom
+// filterFn lets tests or future screens inject alternate filtering
 // logic without changing the hook's state management or statistics logic.
