@@ -1,3 +1,7 @@
+// Silent Failure Audit
+// Pattern 1: filterInterns returns the original intern list when the search query is empty.
+// Pattern 2: calculateAverageScore returns 0 for an empty list instead of indicating that no data exists.
+// No swallowed exceptions or silent defaults were found.
 import { useState, useMemo } from 'react'
 import {
   filterInterns,
@@ -75,3 +79,7 @@ export default useInternSearch
 // defaultFilter preserves the existing behavior. Passing a custom
 // filterFn lets tests or future screens inject alternate filtering
 // logic without changing the hook's state management or statistics logic.
+
+// Audit Comment:
+// Returning 0 as the average for an empty list may hide the difference
+// between "no interns" and "average score is actually zero".

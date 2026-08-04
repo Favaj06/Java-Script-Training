@@ -1,3 +1,7 @@
+// Silent Failure Audit
+// Pattern 1: validateInternForm returns null for valid input instead of a success object.
+// Pattern 2: handleSubmit returns boolean to indicate success/failure instead of throwing on invalid input.
+// Pattern 3: generateId defaults to Date.now(), which assumes a valid ID generator is always available.
 import { useState } from 'react'
 import { validateInternForm } from '../services/intern-service'
 import type { InternFormState } from '../types/intern'
@@ -101,3 +105,7 @@ function useInternForm({
 }
 
 export default useInternForm
+// Audit Comment:
+// The highest-risk silent failure is handleSubmit returning false.
+// If a caller ignores the returned boolean, the form submission failure
+// could be missed without any visible indication.
