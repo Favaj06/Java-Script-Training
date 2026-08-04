@@ -1,9 +1,6 @@
 import { memo, useCallback } from 'react'
 import { useInterns } from '../contexts/intern-context'
 import { useTheme } from '../contexts/theme-context'
-import { memo, useCallback } from 'react'
-import { useInterns } from '../contexts/intern-context'
-import { useTheme } from '../contexts/theme-context'
 import ScoreBadge from './ScoreBadge'
 
 interface InternRowProps {
