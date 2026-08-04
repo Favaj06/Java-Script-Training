@@ -1,6 +1,10 @@
 import { memo, useCallback } from 'react'
 import { useInterns } from '../contexts/intern-context'
 import { useTheme } from '../contexts/theme-context'
+import { memo, useCallback } from 'react'
+import { useInterns } from '../contexts/intern-context'
+import { useTheme } from '../contexts/theme-context'
+import ScoreBadge from './ScoreBadge'
 
 interface InternRowProps {
   id: number
@@ -28,9 +32,10 @@ const InternRow = memo(function InternRow({
         margin: '4px 0',
       }}
     >
-      <span>
-        {name} — {score}
-      </span>
+     <span>
+      {name} — {score}
+      <ScoreBadge score={score} />
+    </span>
 
       <button
         onClick={() => onRemove(id)}
