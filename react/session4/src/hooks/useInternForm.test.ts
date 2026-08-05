@@ -3,6 +3,23 @@ import { type ChangeEvent } from 'react'
 import { expect, test, vi } from 'vitest'
 import useInternForm from './useInternForm'
 
+function changeField(
+  result: { current: ReturnType<typeof useInternForm> },
+  name: string,
+  value: string,
+  type: string = 'text'
+) {
+  act(() => {
+    result.current.handleChange({
+      target: {
+        name,
+        value,
+        type,
+      },
+    } as ChangeEvent<HTMLInputElement>)
+  })
+}
+
 test('isValid returns false and sets error when name is empty', () => {
   expect.hasAssertions()
 
@@ -25,25 +42,8 @@ test('isValid returns true when name and score are valid', () => {
 
   const { result } = renderHook(() => useInternForm())
 
-  act(() => {
-    result.current.handleChange({
-      target: {
-        name: 'name',
-        value: 'Rahul',
-        type: 'text',
-      },
-    } as ChangeEvent<HTMLInputElement>)
-  })
-
-  act(() => {
-    result.current.handleChange({
-      target: {
-        name: 'score',
-        value: '92',
-        type: 'number',
-      },
-    } as ChangeEvent<HTMLInputElement>)
-  })
+  changeField(result, 'name', 'Rahul')
+  changeField(result, 'score', '92', 'number')
 
   let valid = false
 
@@ -58,15 +58,7 @@ test('isValid returns true when name and score are valid', () => {
 test('handleReset clears form values and error', () => {
   const { result } = renderHook(() => useInternForm())
 
-  act(() => {
-    result.current.handleChange({
-      target: {
-        name: 'name',
-        value: 'Rahul',
-        type: 'text',
-      },
-    } as ChangeEvent<HTMLInputElement>)
-  })
+  changeField(result, 'name', 'Rahul')
 
   act(() => {
     result.current.isValid()
@@ -129,29 +121,13 @@ test('fails validation without calling addIntern', () => {
 test('submits valid form with addIntern and default ID generation', () => {
   const addIntern = vi.fn()
   const nowSpy = vi.spyOn(Date, 'now').mockReturnValue(123)
+
   const { result } = renderHook(() =>
     useInternForm({ addIntern })
   )
 
-  act(() => {
-    result.current.handleChange({
-      target: {
-        name: 'name',
-        value: 'Sneha',
-        type: 'text',
-      },
-    } as ChangeEvent<HTMLInputElement>)
-  })
-
-  act(() => {
-    result.current.handleChange({
-      target: {
-        name: 'score',
-        value: '88',
-        type: 'number',
-      },
-    } as ChangeEvent<HTMLInputElement>)
-  })
+  changeField(result, 'name', 'Sneha')
+  changeField(result, 'score', '88', 'number')
 
   let submitted = false
 
@@ -167,6 +143,7 @@ test('submits valid form with addIntern and default ID generation', () => {
     role: 'Frontend',
     isPresent: true,
   })
+
   expect(result.current.form.name).toBe('')
   expect(result.current.error).toBe('')
 
@@ -176,15 +153,7 @@ test('submits valid form with addIntern and default ID generation', () => {
 test('submits valid form without an addIntern callback', () => {
   const { result } = renderHook(() => useInternForm())
 
-  act(() => {
-    result.current.handleChange({
-      target: {
-        name: 'name',
-        value: 'Amit',
-        type: 'text',
-      },
-    } as ChangeEvent<HTMLInputElement>)
-  })
+  changeField(result, 'name', 'Amit')
 
   let submitted = false
 
