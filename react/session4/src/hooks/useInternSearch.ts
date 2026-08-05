@@ -1,3 +1,9 @@
+// Code Smell Audit — useInternSearch.ts
+// Smell 1: Duplicate iteration — interns are traversed multiple times for filter(), length, and average calculation.
+// Smell 2: Magic default value — calculateAverageScore() returns 0 for empty data, hiding the difference between "no interns" and an actual average.
+// Smell 3: Mixed responsibilities — the hook manages search state and computes dashboard statistics.
+
+
 // Silent Failure Audit
 // Pattern 1: filterInterns returns the original intern list when the search query is empty.
 // Pattern 2: calculateAverageScore returns 0 for an empty list instead of indicating that no data exists.
@@ -83,3 +89,8 @@ export default useInternSearch
 // Audit Comment:
 // Returning 0 as the average for an empty list may hide the difference
 // between "no interns" and "average score is actually zero".
+
+
+// Audit Comment:
+// I would separate statistics calculation first because mixing searching
+// and statistics makes the hook harder to maintain and extend.

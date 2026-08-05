@@ -1,3 +1,9 @@
+// Code Smell Audit — useInternForm.ts
+// Smell 1: Long function — handleChange() contains multiple responsibilities (checkbox handling, score conversion, generic input updates).
+// Smell 2: Nested conditional (ternary) — handleChange() uses nested ternary operators, reducing readability.
+// Smell 3: Primitive obsession — validation depends on raw name and score values instead of a dedicated validation model.
+
+
 // Silent Failure Audit
 // Pattern 1: validateInternForm returns null for valid input instead of a success object.
 // Pattern 2: handleSubmit returns boolean to indicate success/failure instead of throwing on invalid input.
@@ -109,3 +115,10 @@ export default useInternForm
 // The highest-risk silent failure is handleSubmit returning false.
 // If a caller ignores the returned boolean, the form submission failure
 // could be missed without any visible indication.
+
+
+
+// Audit Comment:
+// I would fix the nested conditional inside handleChange() first because
+// it is the hardest part of the hook for a new developer to understand.
+// Extracting the input conversion logic into a helper function would improve readability.

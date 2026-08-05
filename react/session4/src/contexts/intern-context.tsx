@@ -3,6 +3,12 @@
 // Pattern 2: removeIntern silently does nothing if the supplied ID does not exist.
 // No empty catch blocks or swallowed exceptions were found.
 
+
+
+// Code Smell Audit — intern-context.tsx
+// Smell 1: Long function — validateInternResponse() performs multiple validation checks in one function.
+// Smell 2: Magic numbers — score validation uses hardcoded values 0 and 100.
+// Smell 3: Missing validation — addIntern() accepts any Intern without validating before storing it.
 import type { Intern } from '../types/intern'
 import {
   createContext,
@@ -181,3 +187,8 @@ export function useInterns(): InternContextType {
 // The highest-risk silent failure is accepting malformed intern data into
 // application state. The API-boundary validation now fails fast before any
 // invalid data is stored, making bugs easier to diagnose.
+
+
+// Audit Comment:
+// I would fix addIntern() first because invalid data entering application
+// state is the highest-risk bug and affects every component using the context.
