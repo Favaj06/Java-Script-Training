@@ -5,7 +5,7 @@ import {
   filterInterns,
   getScoreLabel,
   validateInternForm,
-} from '../services/intern-service'
+} from '../services';
 import type { Intern, InternFormState } from '../types/intern'
 
 describe('createIntern', () => {

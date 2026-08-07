@@ -12,7 +12,7 @@ import { useState, useMemo } from 'react'
 import {
   filterInterns,
   calculateAverageScore,
-} from '../services/intern-service'
+} from '../services';
 
 export interface SearchableIntern {
   id: number

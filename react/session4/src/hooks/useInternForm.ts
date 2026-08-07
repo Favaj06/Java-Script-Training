@@ -9,7 +9,7 @@
 // Pattern 3: generateId defaults to Date.now(), which assumes a valid ID generator is always available.
 
 import { useState } from 'react'
-import { validateInternForm } from '../services/intern-service'
+import { validateInternForm } from "../services";
 import type { InternFormState } from '../types/intern'
 
 interface InternSubmission {
